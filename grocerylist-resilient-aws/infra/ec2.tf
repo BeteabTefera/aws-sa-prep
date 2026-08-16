@@ -7,7 +7,7 @@ resource "aws_security_group" "web" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["YOUR_IP/32"] # replace with your actual IP
+    cidr_blocks = ["174.53.142.69/32"]
   }
 
   ingress {
