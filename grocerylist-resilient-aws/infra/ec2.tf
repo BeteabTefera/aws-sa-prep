@@ -9,7 +9,13 @@ resource "aws_security_group" "web" {
     protocol    = "tcp"
     cidr_blocks = ["174.53.142.69/32"]
   }
-
+  ingress {
+  description = "API port for testing"
+  from_port   = 3000
+  to_port     = 3000
+  protocol    = "tcp"
+  cidr_blocks = ["174.53.142.69/32"]  # your IP from before
+  }
   ingress {
     description = "HTTP"
     from_port   = 80
